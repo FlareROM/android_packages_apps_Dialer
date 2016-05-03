@@ -92,7 +92,6 @@ public class ListsFragment extends Fragment
             new ArrayList<OnPageChangeListener>();
 
     private String[] mTabTitles;
-    private int[] mTabIcons;
 
     /**
      * The position of the currently selected tab.
@@ -215,14 +214,7 @@ public class ListsFragment extends Fragment
         mTabTitles[TAB_INDEX_ALL_CONTACTS] = getResources().getString(R.string.tab_all_contacts);
         mTabTitles[TAB_INDEX_VOICEMAIL] = getResources().getString(R.string.tab_voicemail);
 
-        mTabIcons = new int[TAB_COUNT_WITH_VOICEMAIL];
-        mTabIcons[TAB_INDEX_SPEED_DIAL] = R.drawable.tab_speed_dial;
-        mTabIcons[TAB_INDEX_RECENTS] = R.drawable.tab_recents;
-        mTabIcons[TAB_INDEX_ALL_CONTACTS] = R.drawable.tab_contacts;
-        mTabIcons[TAB_INDEX_VOICEMAIL] = R.drawable.tab_voicemail;
-
         mViewPagerTabs = (ViewPagerTabs) parentView.findViewById(R.id.lists_pager_header);
-        mViewPagerTabs.setTabIcons(mTabIcons);
         mViewPagerTabs.setViewPager(mViewPager);
         addOnPageChangeListener(mViewPagerTabs);
 
